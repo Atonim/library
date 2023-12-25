@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h1= title
+
+    ul
+        each author in author_list
+            li
+                a(href='/catalog/author/' + author) #{author}
+
+        else
+            li В бибилотеке не зарегистрировано ниодного автора.

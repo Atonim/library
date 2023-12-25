@@ -1,0 +1,17 @@
+extends layout
+
+block content
+
+    h1 Автор: #{author}
+
+    div(style='margin-left:20px;margin-top:20px')
+
+        h4 Книги
+
+        dl
+            each book in author_books
+                dt
+                    a(href='/catalog/book/' + book) #{book}
+
+            else
+                p У данного автора нет книг.

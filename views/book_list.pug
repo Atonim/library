@@ -1,0 +1,52 @@
+extends layout
+
+block content
+    h1= title
+
+    ul
+        each book in book_list
+            li
+                a(href='/catalog/book/' + book) #{book}
+
+        else
+            li В библиотеке нет книг.
+
+    a(href='/catalog/books/available', onclick="filterAvailableBooks()") Книги в наличии
+    br
+    a(href='/catalog/books/overdue', onclick="filterOverdueBooks()") Просроченные книги
+
+    script.
+        function filterAvailableBooks() {
+            fetch('/catalog/books/available')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    updateBookList(data);
+                })
+                .catch(error => {
+                    console.error('Ошибка при получении списка книг:', error);
+                });
+        }
+
+        // Функция для фильтрации книг по статусу "Просрочены"
+        function filterOverdueBooks() {
+            fetch('/catalog/books/overdue')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    updateBookList(data);
+                })
+                .catch(error => {
+                    console.error('Ошибка при получении списка книг:', error);
+                });
+        }
+        document.getElementById('showAvailableBooks').addEventListener('click', filterAvailableBooks);
+        document.getElementById('showOverdueBooks').addEventListener('click', filterOverdueBooks);

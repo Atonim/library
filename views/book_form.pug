@@ -1,0 +1,29 @@
+extends layout
+
+block content
+    h1= title
+
+    form(method='POST' action='/catalog/book/create')
+        label(for='title')
+            img(src='/images/book.png', alt='Book Icon')
+            | Название книги:
+        input(type='text', id='title', name='title', value=book)
+
+        label(for='author')
+            img(src='/images/author.png', alt='Author Icon')
+            | Имя автора:
+        input(type='text', id='author', name='author', value=author)
+
+        label(for='genre')
+            img(src='/images/genre.png', alt='Genre Icon')
+            | Название жанра:
+        input(type='text', id='genre', name='genre', value=genre)
+
+        input(type='submit', value='Создать книгу')
+
+    br
+
+    if errors.length
+        ul
+            each error in errors
+                li(style='font-weight: bold; font-size: 18px;')= error.msg

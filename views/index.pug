@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+
+  ul
+    li #[strong Все книги:] !{book_count}
+    li #[strong Книги в наличии:] !{book_available_count}
+    li #[strong Просроченные книги:] !{book_overdue_count}
+    li #[strong Авторы:] !{author_count}
+    li #[strong Жанры:] !{genre_count}

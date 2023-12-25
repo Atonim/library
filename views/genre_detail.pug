@@ -1,0 +1,17 @@
+extends layout
+
+block content
+
+    h1 Жанр: #{genre}
+
+    div(style='margin-left:20px;margin-top:20px')
+
+        h4 Книги
+
+        ul
+            each book in genre_books
+                li
+                    a(href='/catalog/book/' + book) #{book}
+
+            else
+                li В библиотеке нет книг данного жанра

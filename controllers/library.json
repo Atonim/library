@@ -1,0 +1,65 @@
+[
+  {
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "issue_date": "2023-11-18",
+    "due_date": "2023-12-18",
+    "reader": "Max",
+    "genre": "Fiction"
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "issue_date": "",
+    "due_date": "",
+    "reader": "",
+    "genre": "Classic"
+  },
+  {
+    "title": "nbnvkjgjk",
+    "author": "George Orwell",
+    "issue_date": "",
+    "due_date": "",
+    "reader": "",
+    "genre": "Dystopian"
+  },
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "issue_date": "",
+    "due_date": "",
+    "reader": "",
+    "genre": "Romance"
+  },
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "issue_date": "2023-07-19",
+    "due_date": "2023-08-19",
+    "reader": "Max",
+    "genre": "Classic"
+  },
+  {
+    "title": "The Lily",
+    "author": "Jane Austen",
+    "issue_date": "",
+    "due_date": "",
+    "reader": "",
+    "genre": "Romance"
+  },
+  {
+    "title": "The sphere",
+    "author": "Alex Chernyak",
+    "issue_date": "2023-11-27",
+    "due_date": "2023-12-31",
+    "reader": "dd",
+    "genre": "Science Fiction"
+  },
+  {
+    "title": "Harry Potter",
+    "author": "JK Rowling",
+    "issue_date": "",
+    "due_date": "",
+    "genre": "Fantd"
+  }
+]

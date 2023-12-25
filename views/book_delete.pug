@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    h1 Название: #{title}
+
+    p #[strong Автор: ]
+        a(href='/catalog/author/' + author) #{author}
+    p #[strong Жанр: ]
+        a(href='/catalog/genre/' + genre) #{genre}
+        hr
+    p #[strong Читатель:] !{reader}
+    p #[strong Дата выдачи:] !{issue_date}
+    p #[strong Конец срока выдачи:] !{due_date}
+
+    hr
+    p Вы точно хотите удалить эту книгу?
+
+    form(method='POST' action='/catalog/book/' + title + '/delete')
+        div.form-group
+            input#authorid.form-control(type='hidden', name='title', required='true', value=title )
+
+        button.btn.btn-primary(type='submit') Удалить

@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    h1 Название: #{title}
+
+    p #[strong Автор: ]
+        a(href='/catalog/author/' + author) #{author}
+    p #[strong Жанр: ]
+        a(href='/catalog/genre/' + genre) #{genre}
+        hr
+    p #[strong Читатель: ] !{reader}
+    p #[strong Дата выдачи:] !{issue_date}
+    p #[strong Конец срока выдачи:] !{due_date}
+    hr
+    p
+        a(href='/catalog/book/' + title + '/delete') Удалить книгу
+    p
+        a(href='/catalog/book/' + title + '/update') Редактировать книгу
+    p
+        a(href='/catalog/book/' + title + '/return') Сдать книгу
+    p
+        a(href='/catalog/book/' + title + '/take') Взять книгу
+
